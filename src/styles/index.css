@@ -1,0 +1,180 @@
+/* General body styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root Variables */
+:root {
+  --primary-green: #2e7d32;
+  --secondary-green: #66bb6a; /* Added secondary-green variable */
+}
+
+/* Main app container */
+#app-container {
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Centered game container */
+#game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Question card styling */
+.question-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.question-card h2 {
+  font-size: 1.5rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-btn {
+  background-color: #81c784;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.options button:hover {
+  background-color: var(--secondary-green);
+  transform: scale(1.1);
+}
+
+.options button:focus {
+  outline: none;
+}
+
+/* result */
+#result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+/* Plant card */
+.plant-card {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+}
+
+.plant-card h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.plant-image-container {
+  margin: 1rem 0;
+}
+
+.plant-image {
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.plant-image:hover {
+  transform: scale(1.2);
+}
+
+.plant-image.animated-grow {
+  animation: grow 1s ease-in-out;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Next button styling */
+#next-btn {
+  background-color: #388e3c;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#next-btn:hover {
+  background-color: #2c6c29;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .question-card,
+  .plant-card {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .options button {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+}
