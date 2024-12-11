@@ -1,12 +1,14 @@
 import React from "react";
+import "../styles/index.css";
 
 const Question = ({ question, options, onAnswer }) => {
   return (
-    <div className="question-card">
-      <h2>{question}</h2>
+    <div className="question-container">
+      <div className="question-icon">❓</div>
+      <p>{question}</p>
       <div className="options">
-        {options.map((option, index) => (
-          <button key={index} onClick={() => onAnswer(option)} className="option-btn">
+        {options.map((option) => (
+          <button key={option} className="option-btn" onClick={() => onAnswer(option)}>
             {option}
           </button>
         ))}

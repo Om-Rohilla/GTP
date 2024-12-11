@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
-import Game from './components/Game';
-import "./styles/index.css"; 
+import React from "react";
+import Game from "./components/Game";
+import "./styles/index.css";
 
 const App = () => {
   return (
-    <div id="app-container">
-      <h1>🌱 Guess the Plant Game! 🌿</h1>
+    <div className="game-container">
+      <div className="title-card">
+        <h1 className="title">🌿 Guess the Plant Game!</h1>
+      </div>
+      
       <Game />
     </div>
   );
